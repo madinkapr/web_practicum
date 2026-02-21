@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "product": "book"
+  },
+  {
+    "id": 3,
+    "product": "copy-book"
+  },
+  {
+    "id": 4,
+    "product": "telephone"
+  },
+  {
+    "id": 5,
+    "product": "madina"
+  }
+]

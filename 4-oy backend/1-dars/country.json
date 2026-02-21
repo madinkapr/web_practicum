@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "country": "Moscow"
+    },
+    {
+        "id":2,
+        "country": "Germany"
+
+    },
+    {
+        "id":3,
+        "country": "South Korea"
+    }
+]

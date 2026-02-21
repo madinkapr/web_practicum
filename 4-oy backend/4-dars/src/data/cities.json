@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "London",
+    "population": 10000000
+  },
+  {
+    "id": 3,
+    "name": "Korea",
+    "population": 2000000
+  },
+  {
+    "id": 4,
+    "name": "America",
+    "population": 30000000
+  }
+]
