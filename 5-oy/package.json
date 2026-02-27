@@ -1,0 +1,13 @@
+{
+  "name": "5-oy",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "hi": "echo 'Salom'"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-winston": "^4.2.0",
+    "winston": "^3.19.0"
+  }
+}

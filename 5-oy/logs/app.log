@@ -1,0 +1,1 @@
+{"level":"info","message":"GET /home 200 4ms","meta":{"req":{"headers":{"accept":"*/*","host":"localhost:3000","user-agent":"curl/8.16.0"},"httpVersion":"1.1","method":"GET","originalUrl":"/home","query":{},"url":"/home"},"res":{"statusCode":200},"responseTime":4},"timestamp":"2026-02-27T10:55:21.758Z"}
