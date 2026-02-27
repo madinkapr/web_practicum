@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 40px 120px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.auth {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}

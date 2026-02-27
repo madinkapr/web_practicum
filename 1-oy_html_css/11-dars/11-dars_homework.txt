@@ -1,0 +1,378 @@
+// NUMBERGA OID TOPSHIRIQLAR
+
+// 1-topshiriq. Ikkita sonni qo'shing va natijani console ga chiqaring
+let son1 = 15;
+let son2 = 25;
+console.log('son1+son2 =', son1+son2);
+
+var son1 = 15;
+var son2 = 25;
+console.log('son1+son2 =', son1+son2);
+
+const son1 = 15;
+const son2 = 25;
+console.log('son1+son2 =', son1+son2);
+
+
+-------------------------------------------------------------------------------------------------
+
+// 2-topshiriq. Ikkita sonni ayiring va natijani console ga chiqaring
+let son1 = 25;
+let son2 = 15;
+console.log(`son1-son2 = ${son1-son2}`);
+
+var son1 = 25;
+var son2 = 15;
+console.log(`son1-son2 = ${son1-son2}`);
+
+const son1 = 25;
+const son2 = 15;
+console.log(`son1-son2 = ${son1-son2}`);
+
+
+
+--------------------------------------------------------------------------------------------------
+
+// 3-topshiriq .  Ikkita sonni ko’paytiring va natijani console ga chiqaring
+let son1 = 98;
+let son2 = 12;
+console.log(`son1*son2 = ${son1*son2}`);
+
+var son1 = 98;
+var son2 = 12;
+console.log(`son1*son2 = ${son1*son2}`);
+
+const son1 = 98;
+const son2 = 12;
+console.log(`son1*son2 = ${son1*son2}`);
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+// 4-topshiriq .  Ikkita sonni bo’ling va natijani console ga chiqaring
+let son1 = 98;
+let son2 = 12;
+console.log(`son1/son2 = ${son1/son2}`);
+
+var son1 = 98;
+var son2 = 12;
+console.log(`son1/son2 = ${son1/son2}`);
+
+const son1 = 98;
+const son2 = 12;
+console.log(`son1/son2 = ${son1/son2}`);
+
+
+
+
+---------------------------------------------------------------------------------------------------
+
+// 5-topshiriq .  Uchta sonni ko’paytiring va natijani console ga chiqaring
+let son1 = 98;
+let son2 = 12;
+let son3 = 15;
+console.log("son1*son2*son3 = ", son1*son2*son3);
+
+var son1 = 98;
+var son2 = 12;
+var son3 = 15;
+console.log("son1*son2*son3 = ", son1*son2*son3);
+
+const son1 = 98;
+const son2 = 12;
+const son3 = 15;
+console.log("son1*son2*son3 = ", son1*son2*son3);
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+// 6-topshiriq .  Uchta sonni qo’shing va natijani console ga chiqaring
+let son1 = 98;
+let son2 = 12;
+let son3 = 15;
+console.log(`son1+son2+son3 = ${son1+son2+son3}`);
+
+var son1 = 98;
+var son2 = 12;
+var son3 = 15;
+console.log(`son1+son2+son3 = ${son1+son2+son3}`);
+
+const son1 = 98;
+const son2 = 12;
+const son3 = 15;
+console.log(`son1+son2+son3 = ${son1+son2+son3}`);
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+// 7-topshiriq .  Uchta sonni ayiring va natijani console ga chiqaring
+let son1 = 98;
+let son2 = 12;
+let son3 = 15;
+console.log(`son1-son2-son3 = ${son1-son2-son3}`);
+
+const son1 = 98;
+const son2 = 12;
+const son3 = 15;
+console.log(`son1-son2-son3 = ${son1-son2-son3}`);
+
+var son1 = 98;
+var son2 = 12;
+var son3 = 15;
+console.log(`son1-son2-son3 = ${son1-son2-son3}`);
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+// 8-topshiriq .  Uchta sonni bo’lingva natijani console ga chiqaring
+let son1 = 96;
+let son2 = 12;
+let son3 = 8;
+console.log(`son1/son2/son3 = ${son1/son2/son3}`);
+
+var son1 = 96;
+var son2 = 12;
+var son3 = 8;
+console.log(`son1/son2/son3 = ${son1/son2/son3}`);
+
+const son1 = 96;
+const son2 = 12;
+const son3 = 8;
+console.log(`son1/son2/son3 = ${son1/son2/son3}`);
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+
+STRINGGA DOIR TOPSHIRIQLAR
+
+// 1-topshiriq . Ismingiz va yoshingizni birlashtirib, to'liq ma'lumot yarating. Template literal yoki + operatori ishlatib console ga chiqaring.
+
+let ismim = 'Ali';
+let yoshim = 22;
+console.log(`Mening ismim ${ismim}. Yoshim ${yoshim} da`);
+console.log("Mening ismim " + ismim + ". Yoshim " + yoshim+" da");
+
+
+-------------------------------------------------------------------------
+
+// 2-topshiriq .Ikkita shahар nomini birlashtirib yangi matn yarating.
+
+// "Men ... va ... shaharlarida bo'lganman" shaklida console ga chiqaring.
+let shahar1 = 'Toshkent';
+let shahar2 = 'Samarqand';
+console.log(`Men ${shahar1} va ${shahar2} shaharlarida bo'lganman`);
+console.log("Men " + shahar1 + " va " + shahar2 + " shaharlarida bo'lganman");
+
+
+------------------------------------------------------------------------------------
+
+// 3-topshiriq . Sevimli rangingiz va hayvоningizni birlashtirib gap yarating.
+
+// "Mening sevimli rangim ... va sevimli hayvоnim ..." ko'rinishida yozing.
+
+let rang = 'ko\'k';
+let hayvon = 'mushuk';
+console.log(`Mening sevimli rangim ${rang} va sevimli hayvonim ${hayvon}`);
+console.log("Mening sevimli rangim " + rang + " va sevimli hayvonim " + hayvon);
+console.log("Mening sevimli rangim", rang, "va sevimli hayvonim", hayvon);
+
+
+
+--------------------------------------------------------------------------------------
+
+// 4-topshiriq . Tug'ilgan kuningiz ma'lumotlarini birlashtirib to'liq sana yarating.
+
+// "Men ... yilning ... oyining ... kunida tug'ilganman" ko'rinishida.
+
+let kun = '15';
+let oy = 'mart';
+let yil = '2002';
+console.log(`Men ${yil} yilning ${oy} oyining ${kun} kunida tug'ilganman`);
+console.log("Men " + yil + " yilning " + oy + " oyining " + kun + " kunida tug'ilganman");
+console.log("Men", yil, "yilning", oy, "oyining", kun, "kunida tug'ilganman");
+
+
+
+---------------------------------------------------------------------------------------------
+
+// 5-topshiriq .  Оvqat retsepti uchun mahsulotlarni birlashtirib oddiy ro'yxat yarating
+
+// Ularni "va" so'zi bilan bog'lab console ga chiqaring…
+
+let mahsulot= 'un';
+let mahsulot1= 'tuxum';
+let mahsulot2= 'sut';
+let mahsulot3= 'shakar';
+console.log(`${mahsulot} va ${mahsulot1} va ${mahsulot2} va ${mahsulot3}`);
+console.log(mahsulot, "va", mahsulot1, "va", mahsulot2, "va", mahsulot3);
+console.log(mahsulot + " va " + mahsulot1 + " va " + mahsulot2 + " va " + mahsulot3);
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+// 6-topshiriq.  Film haqida ma'lumot yaratib birlashtirib yozing.
+// Film haqida to'liq ma'lumot yarating.
+
+let filmNomi = 'Titanik';
+let rejissor = 'James Cameron';
+let yili = '1997';
+console.log(`${filmNomi} film ${yili} yilda ${rejissor} rejissor tomonidan suratga olingan`);
+console.log(filmNomi + " film " + yili + " yilda " + rejissor + " rejissor tomonidan suratga olingan");
+console.log(filmNomi, "film", yili, "yilda", rejissor, "rejissor tomonidan suratga olingan");
+
+
+**************************************************************************************************************************************************
+
+
+// BOOLEAN GA DOIR TOPSHIRIQLAR
+
+// Namuna : 1-topshiriq. Yoshingiz 18 dan katta yoki kichikligini tekshiring
+
+//  Boolean qiymat yaratib console ga chiqaring
+let mening_yoshim = 16;
+let isTrue = mening_yoshim >18
+console.log(isTrue);
+
+
+------------------------------------------------------
+
+// 2-topshiriq. Yoshingiz 20 dan kattaligini tekshiring
+
+// Boolean qiymat yaratib console ga chiqaring.
+let mening_yoshim = 22;
+let isTrue = mening_yoshim >20;
+console.log(isTrue);
+
+-------------------------------------------------------
+
+// 3-topshiriq. Yoshingiz 18 dan  kichikligini tekshiring
+
+// Boolean qiymat yaratib console ga chiqaring
+
+let mening_yoshim = 16;
+let isTrue = mening_yoshim <18;
+console.log( isTrue);
+
+
+--------------------------------------------------------
+
+// 4-topshiriq.  Mahsulot narxi 100000 dan qimmatligini  tekshiring
+// Qimmatligini tekshiring.
+
+let narx = 85000;
+let isExpensive  = narx >100000;
+console.log(isExpensive);
+
+
+
+---------------------------------------------------------------------
+
+
+// 5-topshiriq.  Mahsulot narxi 120000 dani arzonligini tekshiring
+// Arzonligini tekshiring.
+
+let narx = 125000;
+let isCheap = narx <120000;
+console.log(isCheap);
+
+
+************************************************************************************************************************************
+
+// BIGINT GA DOIR TOPSHIRIQLAR
+
+
+// 1-topshiriq. Katta son yarating va unga 1000 qo'shing
+
+let kattaSon = 9007199254740991n;
+let result = kattaSon + 1000n;
+console.log(result);
+
+// --------------------------------------------------------------
+
+// 2-topshiriq.  Ikki katta sonni ko'paytiring.  Ularni ko'paytirib natijani console ga chiqaring.
+
+let birinchiKattaSon = 123456789012345n;
+let ikkinchiKattaSon = 987654321098765n;
+console.log(birinchiKattaSon * ikkinchiKattaSon);
+
+// -------------------------------------------------------------
+
+// 3-topshiriq. Katta sondan kichik son ayiring. Ayirish amalini bajaring.
+
+let judaKattaSon = 999999999999999999n;
+let ayriluvchi = 123456789n;
+console.log(judaKattaSon-ayriluvchi)
+
+// -------------------------------------------------------------
+
+// 4-topshiriq. Katta sonni 2 ga bo'ling. 2 ga bo'lib natijani console ga chiqaring.
+let juftKattaSon = 888888888888888888n;
+console.log(juftKattaSon/2n);
+
+// --------------------------------------------------------------
+
+// 5-topshiriq.  Katta sonning kvadratini hisoblang.   (daraja ko’rinishini darsda o’tib berganman ). Sonni o'ziga ko'paytirib kvadratni toping.
+let asos = 999999999n;
+console.log(asos**2n);
+
+// -----------------------------------------------------------
+
+// 6-topshiriq. Ikki katta sonni solishtiring.kattaSon1 bu kattaSon2 dan kattami ?
+let kattaSon1 = 111111111111111111n;
+let kattaSon2 = 222222222222222222n;
+let kattami = kattaSon1>kattaSon2;
+console.log(kattami)
+
+// ------------------------------------------------------------
+
+// 7-topshiriq. Regular number dan BigInt yarating. Uni BigInt ga aylantirib 5000n qo'shing...
+
+let oddiyRaqam = 987654321;
+let BigInt = 987654321n;
+let add = BigInt + 5000n;
+console.log(add);
+
+// ---------------------------------------------------------
+
+// 8-topshiriq. BigInt sonlarni qoshingketma-ketligi. Hammasini qo’shim natijani console ga chiqaring.
+
+let son1 = 100n;
+let son2 = 200n;
+let son3 = 300n;
+console.log(son1+son2+son3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

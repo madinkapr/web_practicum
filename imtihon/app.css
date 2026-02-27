@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    padding: 27px 120px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.50px solid #e5e7ea;
+    background: #fff;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.menu>li>a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+header>div>p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+}
+
+.moon {
+    border-radius: 100px;
+    padding: 18px;
+    width: 58px;
+    height: 58px;
+    background: #f5f5f5;
+    border: none;
+}
+
+.login {
+    border-radius: 100px;
+    padding: 18px 30px;
+    width: 142px;
+    height: 58px;
+    background: #299764;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    display: flex;
+    gap: 8px;
+}
+
+.section1 {
+    margin: 20px 120px;
+    position: relative;
+
+}
+
+.section1>.image {
+    border-radius: 20px;
+    width: 1345px;
+    height: 500px;
+    display: block;
+}
+
+.section1>div {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.section1>div>h1 {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 500px;
+
+}
+
+.section1>div>p {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-left: 500px;
+}
+
+.section1_item1 {
+    display: flex;
+    gap: 1111px;
+    align-items: center;
+    margin-top: 350px;
+    margin-left: 40px;
+}
+
+.section1_item1>div>button {
+    border-radius: 100px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: none;
+
+
+}
+
+.section1_item1>div>button>img {
+    text-align: center;
+}
+
+.section1_item1>div {
+    text-align: center;
+}
+
+.section2 {
+    text-align: center;
+    margin-top: -60px;
+    position: relative;
+}
+
+.section2>div>input {
+    border-radius: 100px;
+    width: 600px;
+    height: 66px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    border: none;
+    padding: 22px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #555;
+}
+
+.section2>div>button {
+    border-radius: 100px;
+    width: 58px;
+    height: 58px;
+    background: #299764;
+    border: none;
+}
+
+.section3 {
+    margin: 100px 120px;
+    text-align: center;
+}
+
+.section3>div>h1 {
+    font-weight: 600;
+    font-size: 36px;
+    /* text-align: center; */
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.section3>div>p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* text-align: center; */
+    color: #555;
+}
+
+.buttons {
+    margin-top: 40px;
+    /* text-align: center; */
+    margin-bottom: 24px;
+}
+
+.section3>div>div>button {
+    border-radius: 100px;
+    padding: 19px 40px;
+    border: none;
+    margin-left: 16px;
+}
+
+#btn {
+
+    width: 155px;
+    height: 58px;
+    background: #299764;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+
+#btn1 {
+    border: 1.50px solid #e5e7ea;
+    background: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+}
+
+#btn2 {
+    border: 1.50px solid #e5e7ea;
+    border-radius: 100px;
+    padding: 19px 40px;
+    width: 119px;
+    height: 58px;
+    background: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+}
+
+.section3_item1>div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section3_item1>div>div {
+    border-radius: 16px;
+    width: 387px;
+    background: #f5f5f5;
+    box-sizing: border-box;
+    padding: 30px 24px 0 24px;
+
+}
+
+.section3_item1>div>div>div>h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.section3_item1>div>div>div>p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #555;
+}
+
+.section3_item1>div>div>img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 16px;
+}
+
+.details {
+    display: flex;
+    gap: 54px;
+    align-items: center;
+}
+
+.details>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details>div>ul>li {
+    list-style-type: none;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.section3>button {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 100px;
+    padding: 18px 30px;
+    width: 173px;
+    height: 58px;
+    background: #299764;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section4 {
+    background: #F5F5F5;
+}
+
+.section4>div {
+    border-radius: 20px;
+    width: 1200px;
+    height: 479px;
+    background: #fff;
+    margin: 100px 120px;
+}
+
+.section4>div>div {
+    padding: 70px;
+}
+
+.section4>div>div>p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #4285f4;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.section4>div>div>h1 {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 132%;
+    color: #000;
+    margin-top: 16px;
+}
+
+.underline {
+    background: linear-gradient(90deg, #ea4335 19.83%, #fbbc05 65%, #34a853 82.29%, #4285f4 100%);
+    width: 330px;
+    height: 2px;
+    margin: 30px 0;
+}
+
+.section4>div>div>span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.section4>div>div>button {
+    border-radius: 100px;
+    padding: 18px 50px;
+    width: 194px;
+    height: 58px;
+    background: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    background: radial-gradient(230.93% 230.93% at 102.01% 2.03%, rgb(249, 237, 50) 0%, rgb(238, 42, 123) 36.000001430511475%, rgb(210, 42, 138) 43.99999976158142%, rgb(139, 42, 178) 60.00000238418579%, rgb(27, 42, 240) 82.99999833106995%, rgb(0, 42, 255) 87.99999952316284%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border:1px solid violet;
+
+}

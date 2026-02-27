@@ -1,0 +1,49 @@
+// 1-task
+// function developerDay(year){
+//     if(year>=1 && year<=9999){
+//         let kabisa = false;
+//         if(year%400===0 || year%4===0 && year%100!==0){
+//             kabisa = true;
+//         }
+        
+//         let oylar = [31,28,31,30,31,30,31,31]   
+//         if(kabisa==true){
+//             oylar[1] = 29;
+//         }
+//         let jami = 0;
+//         for(let i=0; i<=7; i++){
+//             jami+=oylar[i];
+//         }
+//         let kun =256-jami;
+//         return `${kun}-sentabr, ${year yil}`
+        
+//     }
+// }
+
+// console.log(developerDay(2022))
+
+
+// // 2-task
+
+// function countIll(n){
+//     return 2**(n-1)
+// }
+
+// console.log(countIll(5))
+
+
+// 3-masala
+function isSpecial(n){
+        let sum = 0;
+        while(n>0){
+            let last = n%10;
+            sum+=last;
+            n=Math.floor(n/10);
+        }
+        if(n%(sum**2)==0){
+            console.log("G'aroyib son")
+        }else{
+            console.log("G'aroyib son emas")
+        }
+}
+isSpecial(162)

@@ -10,4 +10,4 @@ const studentSchema = new Schema({
     timestamps: true
 })
 
-export default model('Students', studentSchema)
+export default model('Students', studentSchema);

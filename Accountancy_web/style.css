@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 40px 120px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.auth {
+    display: flex;
+    gap: 20px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.login {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    line-height: 140%;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.talk {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    line-height: 140%;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.auth a {
+    text-decoration: none;
+    color: black;
+}
+
+.talk a {
+    color: white;
+}
+
+.basic {
+    margin-top: 110px;
+    margin-bottom: 100px;
+    padding-right: 5px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 77px;
+    line-height: 108%;
+}
+
+.info {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 153%;
+}
+
+.info a {
+    color: #335c81;
+    ;
+}
+
+.main-page {
+    padding-left: 10px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 667px;
+    height: 517px;
+}
+
+.main-auth {
+    margin-top: 75px;
+}
+
+.main-auth p {
+    font-size: 18px;
+}
+
+.talk_to_us {
+    font-weight: 700;
+    padding: 10px 20px;
+    line-height: 115%;
+    color: #fff;
+    background-color: black;
+    border-radius: 50px;
+    margin-top: 20px;
+    width: 159;
+    height: 61;
+    font-size: 16px;
+}
+
+.statistica {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.headline {
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 101%;
+    padding-bottom: 30px;
+}
+
+p span {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+
+}
+
+.split-grid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24%;
+}
+
+.img-side {
+    margin-left: 30px;
+}

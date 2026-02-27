@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Be Vietnam;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    padding: 56px 165px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 32px;
+}
+
+.btn {
+    border-radius: 22px;
+    width: 137px;
+    height: 44px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fcf6f5;
+    background-color: #F3603C;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.section1 {
+
+    display: flex;
+    align-items: center;
+    gap: 400px;
+}
+
+.section1_item1 {
+    padding-top: 169px;
+}
+
+.section1_item1>h1 {
+    font-size: 56px;
+    line-height: 114%;
+    letter-spacing: -0.02em;
+    color: #242d52;
+}
+
+.section1_item1>p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: #242d52;
+    margin-top: 16px;
+}
+
+.section1_item1>button {
+    margin-top: 40px;
+}
+
+.section1_item2>div {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#number {
+    font-size: 70px;
+    background: #fafafa;
+    border-radius: 4px;
+    width: 227px;
+    height: 108px;
+    /* text-align: center; */
+}
+
+.statistika>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 31px;
+    background-color: #fafafa;
+}
+
+.statistika>.orange {
+    border-radius: 4px;
+    width: 106px;
+    height: 78px;
+    background: #f3603c;
+}
+
+.statistika>.white {
+    border-radius: 4px;
+    width: 106px;
+    height: 78px;
+    background: #fafafa;
+}
+
+.section1>.section1_item2>.statistika {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    ' one one'
+    'two three';
+}
+
+.section1>.section1_item2>.statistika>.one{
+    grid-area: one;
+ }
+
+.section1>.section1_item2>.statistika>.orange{
+    grid-area: two;
+} 
+
+.section1>.section1_item2>.statistika>.white{
+    grid-area: three;
+} 
+
+.section1_item2>div {
+    margin-top: 15px;
+
+}

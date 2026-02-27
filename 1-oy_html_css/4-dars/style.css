@@ -1,0 +1,11 @@
+.container {
+    background-color: blue;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.container>div {
+    background-color:azure;
+    padding: 10px;
+}

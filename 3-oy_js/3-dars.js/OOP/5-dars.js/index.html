@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(99, 99, 200);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+
+    }
+
+    form {
+        background-color: white;
+        width: 30%;
+        height: 30%;
+        border-radius: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+    }
+
+
+    #result {
+        background-color: green;
+        border-radius: 10px;
+    }
+
+    .error {
+        color: rgb(216, 55, 55);
+    }
+</style>
+
+<body>
+    <form action="#" id="form">
+        <h1>Ro'yxatdan o'tish</h1>
+        <label for="name">Username: </label>
+        <input type="text" placeholder="Ismingizni kiriting" id="name"><br><br>
+        <label for="pass">Password: </label>
+        <input type="text" placeholder="Parolingizni kiriting" id="pass"> <br><br>
+        <input type="submit" value="Send" style="padding: 10px; background-color: antiquewhite;">
+
+
+        <h1 class="error"></h1>
+        <div id="result">
+            <h2 id="success" style="display:none;">Sizning ma'lumotingiz</h2>
+            <h2 id="nameValue"></h2>
+            <h2 id="passValue"></h2>
+        </div>
+    </form>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
