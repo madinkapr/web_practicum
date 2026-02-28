@@ -1,2 +1,9 @@
 node_modules/
+*.mp4
+*.mp3
+*.webm
+*.jpg
+*.svg
+*.png
 
+.env
