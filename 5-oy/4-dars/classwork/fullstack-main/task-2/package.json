@@ -1,0 +1,10 @@
+{
+	"name": "x",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm --parallel -r dev",
+		"dev:api": "pnpm --filter @x/api dev",
+		"dev:web": "pnpm --filter @x/web dev"
+	}
+}
