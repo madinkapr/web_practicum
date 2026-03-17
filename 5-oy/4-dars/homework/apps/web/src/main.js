@@ -77,12 +77,12 @@ function attachListeners() {
 function attachListenerToCard(i) {
   cards[i].addEventListener('click', function(e) {
     var card = getCardElement(e.target);
-    onCardClick(card);
+    onCardClick(card,i);
   })
 }
 
 /* When a card is clicked */
-function onCardClick(card) {
+function onCardClick(card,i) {
   // set the current card
   currentCard = card;
   // add the 'clicked' class to the card, so it animates out

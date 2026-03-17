@@ -1,6 +1,11 @@
 /* 
 ** Layout, Text & Colors 
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   background: #150f21;
