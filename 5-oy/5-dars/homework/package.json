@@ -1,0 +1,9 @@
+{
+  "name": "chat",
+  "private":true,
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:api": "pnpm --filter @chat/api dev",
+    "dev:web":"pnpm --filter @chat/web dev"
+  }
+}
