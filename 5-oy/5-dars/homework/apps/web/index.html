@@ -1,12 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat App</title>
+</head>
+<body>
+  <div class="chat-page">
+    <div class="chat-card">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <div class="chat-header-avatar">C</div>
+          <div>
+            <h1>Chat Room</h1>
+            <p class="chat-subtitle">Realtime messages</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="messages"></div>
+
+      <div class="chat-form">
+        <input class="chat-input" type="text" placeholder="Xabar yozing..." />
+        <button class="send-btn" type="button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
