@@ -1,4 +1,4 @@
-import { Client } from 'pg'
+import { Client } from "pg";
 
 const PG_USER = process.env.PG_USER
 const PG_PASSWORD = process.env.PG_PASSWORD
@@ -16,14 +16,12 @@ const client = new Client({
 
 await client.connect()
 
-export async function query(sql, ...params) {
+export async function query(sql, params = []){
     try {
         const result = await client.query(sql, params)
         return result.rows
     } catch (error) {
-        console.log(error)
-    }
-    finally {
-        client.end()
+        console.error(error)
+        throw error;
     }
 }
