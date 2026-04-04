@@ -36,14 +36,11 @@ create table books (
     id serial not null primary key,
     title text not null,
     author_id int references authors(id) on delete cascade,
+    category_id int references categories(id) on delete cascade,
     published_year int,
     isbn varchar(20) unique
 )
 
-create table book_categories (
-    book_id int references books(id) on delete cascade,
-    category_id int references categories(id) on delete cascade
-    primary key(book_id, category_id)
-)
+
 
 

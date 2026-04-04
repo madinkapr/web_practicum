@@ -1,0 +1,12 @@
+{
+  "name": "pgnode",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=.env --watch src/index.js",
+    "start": "node --env-file=.env src/index.js"
+  },
+  "dependencies": {
+    "fastify": "^5.8.4",
+    "pg": "^8.20.0"
+  }
+}
