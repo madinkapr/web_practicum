@@ -104,6 +104,11 @@ select:focus {
 	background: var(--bg-input);
 }
 
+.books li b{
+	background-color: yellow;
+	color: black;
+}
+
 .books li h3 {
 	font-size: 16px;
 	font-weight: 600;
