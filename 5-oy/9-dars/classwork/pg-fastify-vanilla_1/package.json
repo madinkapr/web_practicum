@@ -1,0 +1,6 @@
+{
+	"name": "app",
+	"scripts": {
+		"dev:backend": "pnpm --filter @app/backend dev"
+	}
+}
