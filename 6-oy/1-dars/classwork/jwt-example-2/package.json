@@ -1,0 +1,10 @@
+{
+	"name": "jwt-example-2",
+	"type": "module",
+	"scripts": {
+		"dev": "node --watch --env-file=.env src/index.js"
+	},
+	"dependencies": {
+		"jsonwebtoken": "^9.0.3"
+	}
+}

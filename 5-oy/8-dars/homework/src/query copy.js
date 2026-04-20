@@ -1,4 +1,4 @@
-import { Pool } from "pg";
+import { Client } from "pg";
 
 const PG_USER = process.env.PG_USER
 const PG_PASSWORD = process.env.PG_PASSWORD
@@ -6,7 +6,7 @@ const PG_HOST = process.env.PG_HOST
 const PG_PORT = process.env.PG_PORT
 const PG_DBNAME = process.env.PG_DBNAME
 
-const pool = new Pool({
+const client = new Client({
     user: PG_USER,
     password: PG_PASSWORD,
     host: PG_HOST,
@@ -14,19 +14,18 @@ const pool = new Pool({
     database: PG_DBNAME,
 })
 
-// await client.connect()
+await client.connect()
 
-export async function query(sql, ...paramlar){
-    
-    const client = await pool.connect();
+export async function query(sql, paramlar=[]){
     try {
+        console.log()
         const result = await client.query(sql, paramlar)
         return result.rows
     } catch (error) {
-        client.release(error);
+        console.error(error)
         throw error;
     }
-    finally {
-        client.release();
-    }
+    // finally {
+    //     client.end();
+    // }
 }
