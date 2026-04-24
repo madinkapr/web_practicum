@@ -126,4 +126,6 @@ fastify.post("/login", async (req, res) => {
 	}
 })
 
-fastify.listen({ port: 3_000 })
+fastify.listen({ port: 3_000 }, ()=> {
+	console.log("Server is running on http://localhost:3000")
+})
