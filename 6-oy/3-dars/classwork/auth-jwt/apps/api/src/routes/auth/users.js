@@ -5,6 +5,13 @@ const JWT_ACCESS_SECRET = process.env.VITE_JWT_ACCESS_SECRET
 
 export const schema = {
 	schema: {
+		headers: {
+			type: "object",
+			properties: {
+				authorization: { type: "string" },
+			},
+			required: [ "authorization" ],
+		},
 		response: {
 			200: {
 				type: "array",
