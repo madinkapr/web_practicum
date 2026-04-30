@@ -1,5 +1,5 @@
 {
-	"name": "user-auth",
+	"name": "@user-auth/api",
 	"type": "module",
 	"scripts": {
 		"dev": "node --watch --env-file=.env src/index.js",
