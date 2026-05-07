@@ -11,7 +11,6 @@ export function TodoList({ todos }) {
                             key={todo.id}
                             title={todo.title}
                             completed={todo.completed}
-                            isCompleted={false}
                         />
                     ))
                 }
