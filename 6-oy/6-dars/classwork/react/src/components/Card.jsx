@@ -11,7 +11,7 @@ export function Card( props ) {
 	} )
 
 	return (
-		<li>
+		<li onClick={ props.onClick }>
 			<h1>{ props.name }</h1>
 			<p>
 				<span>Price:</span>
