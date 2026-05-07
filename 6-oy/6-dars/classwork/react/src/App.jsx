@@ -10,6 +10,8 @@ export default function App() {
     { id: 3, name: "Kecha va kunduz", price: 40 }
   ]
 
+  const isSelected = true
+
   return (
     <>
       <Header name={"Daler"} />
@@ -29,6 +31,8 @@ export default function App() {
           ))
         }
       </Cards>
+
+      {isSelected && <>OK</>}
     </>
   )
 }
