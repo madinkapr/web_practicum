@@ -30,7 +30,11 @@ fastify.get("/", async function handler(request, reply) {
 
 fastify.get("/auth/google", async (request, reply) => {
 
-	const googleAuthUrl = `https://accounts.google.com/o/oauth2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=openid email profile&response_type=code`
+	const googleAuthUrl = `https://accounts.google.com/o/oauth2/auth
+		?client_id=${GOOGLE_CLIENT_ID}
+		&redirect_uri=${REDIRECT_URI}
+		&scope=openid email profile
+		&response_type=code`
 
 	reply.redirect(googleAuthUrl)
 })
@@ -80,7 +84,7 @@ fastify.get("/auth/callback", async (request, reply) => {
 	const sessionId = Math.random().toString(36).substring(2)
 
 	await query(SAVE_SESSION, sessionId, userId)
-	
+
 	reply.setCookie("session_id", sessionId, {
 		httpOnly: true,
 		sameSite: "lax",
@@ -94,7 +98,7 @@ fastify.get("/me", async (request, reply) => {
 
 	const sessionId = request.cookies.session_id
 
-	if (!sessionId ) {
+	if (!sessionId) {
 
 		return reply.code(401).send({ error: "Not authenticated" })
 	}

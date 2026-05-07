@@ -5,7 +5,8 @@ export const SAVE_USER = `
 `
 
 export const SAVE_SESSION = `
-    INSERT INTO sessions (session_id, user_id) VALUES ($1, $2)
+    INSERT INTO sessions (session_id, user_id) 
+    VALUES ($1, $2)
 `
 
 export const GET_SESSION = `
