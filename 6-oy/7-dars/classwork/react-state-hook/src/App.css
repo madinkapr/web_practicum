@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 2rem;
+}
+
+input {
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+}
+
+.todos {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.todos > li {
+	display: flex;
+	gap: 1rem;
+}
