@@ -5,17 +5,21 @@ export function Navbar() {
 	const go = useNavigate()
 
 	return (
-		<nav>
-			<ul>
-				<li>
-					<button
-						onClick={ () => go( "/" ) }
-					>Home</button>
-				</li>
-				<li>
-					<NavLink to="/about">About</NavLink>
-				</li>
-			</ul>
+		<nav className="navbar">
+			<div className="navbar__inner">
+				<span className="navbar__logo">DevBlog</span>
+				<ul className="navbar__links">
+					<li>
+						<button onClick={() => go("/")}>Home</button>
+					</li>
+					<li>
+						<NavLink to="/about">About</NavLink>
+					</li>
+					<li>
+						<NavLink to="/posts">Posts</NavLink>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	)
 }
