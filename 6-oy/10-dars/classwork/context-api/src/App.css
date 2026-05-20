@@ -1,0 +1,15 @@
+.dark {
+	color-scheme: dark only;
+}
+
+.light {
+	color-scheme: light only;
+}
+
+.uzbek {
+	font-family: "Times New Roman", serif;
+}
+
+.english {
+	font-family: "Arial", sans-serif;
+}
