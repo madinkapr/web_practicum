@@ -6,6 +6,7 @@ export default function Footer() {
 
 	const [language] = useContext(LanguageContext)
 	const [theme, setTheme] = useContext(ThemeContext)
+	const className = `choose ${language}`
 
 	return (
 		<footer>
@@ -16,7 +17,7 @@ export default function Footer() {
 				<option value="light">Light</option>
 				<option value="dark">Dark</option>
 			</select>
-			<p>
+			<p className={className}>
 				{language === "english" ?
 					"Copyright © 2026 Apple Inc. All rights reserved." :
 					"Mualliflik huquqi © 2026 Apple Inc. Barcha huquqlar himoyalangan."}
