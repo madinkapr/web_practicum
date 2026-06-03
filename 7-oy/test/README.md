@@ -108,6 +108,12 @@ pnpm dev:frontend
 
 ---
 
+## API Dokumentatsiya
+
+To'liq Swagger dokumentatsiya [`swagger.yaml`](./swagger.yaml) faylida. Ko'rish uchun [Swagger Editor](https://editor.swagger.io) ga faylni yuklang.
+
+---
+
 ## API Endpointlar
 
 ### POST `/auth/register`
