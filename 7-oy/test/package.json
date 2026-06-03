@@ -1,0 +1,14 @@
+{
+  "name": "auth-project",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "dev:backend": "pnpm --filter @auth-project/backend dev",
+    "dev:frontend": "pnpm --filter @auth-project/frontend dev"
+  }
+}

@@ -1,0 +1,125 @@
+openapi: 3.0.0
+
+info:
+  title: Auth API
+  version: 1.0.0
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+
+  /auth/register:
+    post:
+      summary: Ro'yxatdan o'tish
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, email, password]
+              properties:
+                name:
+                  type: string
+                  example: "Ali Karimov"
+                email:
+                  type: string
+                  example: "ali@gmail.com"
+                password:
+                  type: string
+                  example: "12345678"
+      responses:
+        '201':
+          description: Muvaffaqiyatli ro'yxatdan o'tildi
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  id:
+                    type: integer
+                    example: 1
+        '400':
+          description: Xato ma'lumot
+
+  /auth/login:
+    post:
+      summary: Tizimga kirish
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                  example: "ali@gmail.com"
+                password:
+                  type: string
+                  example: "12345678"
+      responses:
+        '200':
+          description: Muvaffaqiyatli kirildi
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: "eyJhbGciOiJIUzI1NiJ9..."
+        '401':
+          description: Parol yoki email xato
+
+  /auth/profile:
+    get:
+      summary: Profil ma'lumotlari
+      tags:
+        - Auth
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Profil ma'lumotlari
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: "Ali Karimov"
+                  email:
+                    type: string
+                    example: "ali@gmail.com"
+        '401':
+          description: Token yo'q yoki xato
+
+  /auth/logout:
+    post:
+      summary: Tizimdan chiqish
+      tags:
+        - Auth
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Muvaffaqiyatli chiqildi
+        '401':
+          description: Token yo'q yoki xato
