@@ -91,12 +91,13 @@ input:focus {
 
 .forgot-link {
   position: absolute;
-  right: 14px;
+  right: 44px;
   font-size: 11px;
   font-weight: 600;
   color: #6C5CE7;
   text-decoration: none;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .primary-btn {
@@ -154,4 +155,20 @@ input:focus {
   color: #888;
   text-align: center;
   margin-bottom: 24px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+.success {
+  color: green;
+  font-size: 13px;
 }
