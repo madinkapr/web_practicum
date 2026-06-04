@@ -18,13 +18,13 @@ fastify.post("/prompt", async (req, res) => {
 		contents: prompt,
 	})
 
-	const text=response.candidates[0].content.parts[0].text
+	const text = response.candidates[0].content.parts[0].text
 
 	return { response: text }
 })
 
-fastify.listen({port:3000}, (err) => {
-	if(err){
+fastify.listen({ port: 3000 }, (err) => {
+	if (err) {
 		fastify.log.error(err)
 	}
 	fastify.log.info(`Server is running on port 3000`)
