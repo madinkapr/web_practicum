@@ -1,0 +1,12 @@
+{
+	"name": "ai-bot",
+	"type": "module",
+	"scripts": {
+		"dev": "node --watch --env-file=.env index.js",
+		"start": "node --env-file=.env index.js"
+	},
+	"dependencies": {
+		"@google/genai": "^2.7.0",
+		"fastify": "^5.8.5"
+	}
+}
