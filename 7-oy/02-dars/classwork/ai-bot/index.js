@@ -1,10 +1,12 @@
 import { GoogleGenAI } from "@google/genai"
 import Fastify from "fastify"
+import cors from "@fastify/cors"
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY })
 
 const fastify = Fastify({ logger: true })
+fastify.register(cors)
 
 fastify.post("/prompt", async (req, res) => {
 	const { prompt } = req.body
