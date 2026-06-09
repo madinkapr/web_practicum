@@ -15,14 +15,19 @@ fastify.post("/prompt", async (req, res) => {
 		return res.status(400).send({ error: "Prompt is required" })
 	}
 
-	const response = await ai.models.generateContent({
-		model: "gemini-2.5-flash",
-		contents: prompt,
-	})
+	try {
+		const response = await ai.models.generateContent({
+			model: "gemini-2.5-flash",
+			contents: prompt,
+		})
 
-	const text = response.candidates[0].content.parts[0].text
+		const text = response.candidates[0].content.parts[0].text
 
-	return { response: text }
+		return { response: text }
+	} catch (err) {
+		fastify.log.error(err)
+		return res.status(500).send({ error: "AI service error: " + err.message })
+	}
 })
 
 fastify.listen({ port: 3000 }, (err) => {
