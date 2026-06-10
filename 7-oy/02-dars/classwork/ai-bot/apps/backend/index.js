@@ -6,7 +6,7 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY })
 
 const fastify = Fastify({ logger: true })
-fastify.register(cors)
+fastify.register(cors, { origin: true })
 
 fastify.post("/prompt", async (req, res) => {
 	const { prompt } = req.body
@@ -25,7 +25,7 @@ fastify.post("/prompt", async (req, res) => {
 
 		return { response: text }
 	} catch (err) {
-		fastify.log.error(err)
+		fastify.log.error(err) 
 		return res.status(500).send({ error: "AI service error: " + err.message })
 	}
 })
