@@ -23,7 +23,6 @@ fastify.post("/prompt", async (req, res) => {
 
 		res.raw.setHeader("Content-Type", "text/plain")
 		res.raw.setHeader("Transfer-Encoding", "chunked")
-		res.raw.setHeader("Access-Control-Allow-Origin", "*")
 
 		for await (const chunk of stream) {
 			const text = chunk.candidates[0].content.parts[0].text
