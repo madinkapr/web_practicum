@@ -200,7 +200,7 @@
 //     age: number
 // }
 
-// let obj = {
+// let obj : User = {
 //     name: "John",
 //     age: 30
 // }
