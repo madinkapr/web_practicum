@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        Int    @id @default(autoincrement())
+  firstName String
+  lastName  String
+  phone     String
+  gender    String
+  password  String
+  role      String
+}
+
+model Teacher {
+  id         Int     @id @default(autoincrement())
+  firstName  String
+  lastName   String
+  phone      String
+  gender     String
+  password   String
+  courseId   Int
+  experience Int?
+}
+
+model Student {
+  id        Int     @id @default(autoincrement())
+  firstName String
+  lastName  String
+  phone     String
+  gender    String
+  password  String
+  groupId   Int
+  birthDate String?
+}
+
+model Room {
+  id       Int     @id @default(autoincrement())
+  name     String
+  capacity Int
+  floor    Int?
+  type     String?
+}
+
+model Course {
+  id            Int     @id @default(autoincrement())
+  name          String
+  duration      Int
+  price         Int
+  description   String?
+  lectureCount  Int
+  practiceCount Int
+}
+
+model Group {
+  id                  Int     @id @default(autoincrement())
+  name                String
+  courseId            Int
+  lectureTeacherId    Int
+  practiceTeacherId   Int
+  roomId              Int
+  startDate           String
+  endDate             String?
+  lectureDays         String
+  lectureStartTime    String
+  lectureEndTime      String
+  practiceDays        String
+  practiceStartTime   String
+  practiceEndTime     String
+}
