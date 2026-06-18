@@ -7,11 +7,6 @@ import { UpdateTeacherDto } from './dto/update-teacher.dto';
 export class TeachersController {
   constructor(private readonly teachersService: TeachersService) {}
 
-  @Post()
-  create(@Body() createTeacherDto: CreateTeacherDto) {
-    return this.teachersService.create(createTeacherDto);
-  }
-
   @Get()
   findAll() {
     return this.teachersService.findAll();
@@ -20,6 +15,11 @@ export class TeachersController {
   @Get(':id')
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.teachersService.findOne(id);
+  }
+
+  @Post()
+  create(@Body() createTeacherDto: CreateTeacherDto) {
+    return this.teachersService.create(createTeacherDto);
   }
 
   @Patch(':id')

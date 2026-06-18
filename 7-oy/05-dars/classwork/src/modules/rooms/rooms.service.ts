@@ -7,11 +7,11 @@ import { PrismaService } from '../../prisma/prisma.service';
 export class RoomsService {
   constructor(private prisma: PrismaService) {}
 
-  create(createRoomDto: CreateRoomDto) {
+  async create(createRoomDto: CreateRoomDto) {
     return this.prisma.room.create({ data: createRoomDto });
   }
 
-  findAll() {
+  async findAll() {
     return this.prisma.room.findMany();
   }
 

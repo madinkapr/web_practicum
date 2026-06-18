@@ -7,13 +7,15 @@ import { PrismaService } from '../../prisma/prisma.service';
 export class UsersService {
   constructor(private prisma: PrismaService) {}
 
-  create(createUserDto: CreateUserDto) {
+  async create(createUserDto: CreateUserDto) {
     return this.prisma.user.create({ data: createUserDto });
   }
 
-  findAll() {
+  async findAll() {
     return this.prisma.user.findMany();
   }
+
+ 
 
   async findOne(id: number) {
     const user = await this.prisma.user.findUnique({ where: { id } });

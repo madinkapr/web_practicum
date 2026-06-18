@@ -7,11 +7,6 @@ import { UpdateGroupDto } from './dto/update-group.dto';
 export class GroupsController {
   constructor(private readonly groupsService: GroupsService) {}
 
-  @Post()
-  create(@Body() createGroupDto: CreateGroupDto) {
-    return this.groupsService.create(createGroupDto);
-  }
-
   @Get()
   findAll() {
     return this.groupsService.findAll();
@@ -20,6 +15,11 @@ export class GroupsController {
   @Get(':id')
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.groupsService.findOne(id);
+  }
+
+  @Post()
+  create(@Body() createGroupDto: CreateGroupDto) {
+    return this.groupsService.create(createGroupDto);
   }
 
   @Patch(':id')

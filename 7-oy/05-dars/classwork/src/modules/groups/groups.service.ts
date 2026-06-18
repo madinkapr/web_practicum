@@ -7,11 +7,11 @@ import { PrismaService } from '../../prisma/prisma.service';
 export class GroupsService {
   constructor(private prisma: PrismaService) {}
 
-  create(createGroupDto: CreateGroupDto) {
+  async create(createGroupDto: CreateGroupDto) {
     return this.prisma.group.create({ data: createGroupDto });
   }
 
-  findAll() {
+  async findAll() {
     return this.prisma.group.findMany();
   }
 

@@ -7,11 +7,11 @@ import { PrismaService } from '../../prisma/prisma.service';
 export class StudentsService {
   constructor(private prisma: PrismaService) {}
 
-  create(createStudentDto: CreateStudentDto) {
+  async create(createStudentDto: CreateStudentDto) {
     return this.prisma.student.create({ data: createStudentDto });
   }
 
-  findAll() {
+  async findAll() {
     return this.prisma.student.findMany();
   }
 

@@ -7,11 +7,6 @@ import { UpdateRoomDto } from './dto/update-room.dto';
 export class RoomsController {
   constructor(private readonly roomsService: RoomsService) {}
 
-  @Post()
-  create(@Body() createRoomDto: CreateRoomDto) {
-    return this.roomsService.create(createRoomDto);
-  }
-
   @Get()
   findAll() {
     return this.roomsService.findAll();
@@ -20,6 +15,11 @@ export class RoomsController {
   @Get(':id')
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.roomsService.findOne(id);
+  }
+
+  @Post()
+  create(@Body() createRoomDto: CreateRoomDto) {
+    return this.roomsService.create(createRoomDto);
   }
 
   @Patch(':id')
