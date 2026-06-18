@@ -7,7 +7,7 @@ import { UpdateRoomDto } from './dto/update-room.dto';
 export class RoomsController {
   constructor(private readonly roomsService: RoomsService) {}
 
-  @Get()
+  @Get('all')
   findAll() {
     return this.roomsService.findAll();
   }

@@ -7,7 +7,7 @@ import { UpdateTeacherDto } from './dto/update-teacher.dto';
 export class TeachersController {
   constructor(private readonly teachersService: TeachersService) {}
 
-  @Get()
+  @Get('all')
   findAll() {
     return this.teachersService.findAll();
   }

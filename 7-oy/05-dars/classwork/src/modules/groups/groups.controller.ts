@@ -7,7 +7,7 @@ import { UpdateGroupDto } from './dto/update-group.dto';
 export class GroupsController {
   constructor(private readonly groupsService: GroupsService) {}
 
-  @Get()
+  @Get('all')
   findAll() {
     return this.groupsService.findAll();
   }
