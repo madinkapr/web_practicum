@@ -6,6 +6,12 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Roles {
+  SUPERADMIN
+  ADMIN
+  Teacher
+}
+
 model User {
   id        Int    @id @default(autoincrement())
   firstName String

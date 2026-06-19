@@ -6,8 +6,9 @@ import { StudentsModule } from './modules/students/students.module';
 import { RoomsModule } from './modules/rooms/rooms.module';
 import { CoursesModule } from './modules/courses/courses.module';
 import { GroupsModule } from './modules/groups/groups.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [PrismaModule, UsersModule, TeachersModule, StudentsModule, RoomsModule, CoursesModule, GroupsModule],
+  imports: [ConfigModule.forRoot({isGlobal:true}), PrismaModule, UsersModule, TeachersModule, StudentsModule, RoomsModule, CoursesModule, GroupsModule],
 })
 export class AppModule {}
