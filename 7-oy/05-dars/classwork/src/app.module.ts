@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { PrismaModule } from './prisma/prisma.module';
+import { PrismaModule } from './core/database/prisma.module';
 import { UsersModule } from './modules/users/users.module';
 import { TeachersModule } from './modules/teachers/teachers.module';
 import { StudentsModule } from './modules/students/students.module';

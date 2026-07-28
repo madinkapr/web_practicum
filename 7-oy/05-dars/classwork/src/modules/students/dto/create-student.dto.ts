@@ -1,37 +1,30 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsEnum, IsNumber, IsOptional } from "class-validator";
+import { IsString, IsNotEmpty, IsEnum, IsNumber, IsOptional, IsEmail, IsPhoneNumber, MaxLength, MinLength } from "class-validator";
 
 export class CreateStudentDto {
-    @ApiProperty({ example: 'Sardor' })
+    @ApiProperty({ example: 'Sardor Toshmatov' })
     @IsString()
     @IsNotEmpty()
-    firstName!: string;
+    fullname!: string;
 
-    @ApiProperty({ example: 'Toshmatov' })
+    @ApiProperty({ example: 'sardor.toshmatov@gmail.com' })
     @IsString()
-    @IsNotEmpty()
-    lastName!: string;
+    @IsEmail()
+    email!: string;
 
     @ApiProperty({ example: '+998904445566' })
-    @IsString()
-    @IsNotEmpty()
-    phone!: string;
+    @IsPhoneNumber("UZ")
+    contact!: string;
 
-    @ApiProperty({ example: 'Male', enum: ['Male', 'Female'] })
-    @IsEnum(['Male', 'Female'])
-    gender!: string;
+    @ApiProperty({ example: 'Toshkent, Chilonzor tumani, 5-uy' })
+    @IsNotEmpty()
+    @IsString()
+    address!: string;
 
     @ApiProperty({ example: '123456' })
     @IsString()
     @IsNotEmpty()
+    @MaxLength(20)
+    @MinLength(6)
     password!: string;
-
-    @ApiProperty({ example: 1 })
-    @IsNumber()
-    groupId!: number;
-
-    @ApiPropertyOptional({ example: '2003-05-14' })
-    @IsOptional()
-    @IsString()
-    birthDate?: string;
 }

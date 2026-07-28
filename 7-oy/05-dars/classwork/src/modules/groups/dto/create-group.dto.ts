@@ -1,5 +1,6 @@
-import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsNumber, IsOptional } from "class-validator";
+import { ApiProperty } from '@nestjs/swagger';
+import { IsString, IsNotEmpty, IsNumber, IsEnum, IsArray } from "class-validator";
+import { WeekDays } from '@prisma/client';
 
 export class CreateGroupDto {
     @ApiProperty({ example: 'Web Praktikum N6' })
@@ -7,59 +8,25 @@ export class CreateGroupDto {
     @IsNotEmpty()
     name!: string;
 
+    @ApiProperty({ example: [WeekDays.MONDAY, WeekDays.WEDNESDAY], enum: WeekDays, isArray: true })
+    @IsArray()
+    @IsEnum(WeekDays, { each: true })
+    week_days!: WeekDays[];
+
+    @ApiProperty({ example: '09:00' })
+    @IsString()
+    @IsNotEmpty()
+    start_time!: string;
+
     @ApiProperty({ example: 1 })
     @IsNumber()
     courseId!: number;
 
     @ApiProperty({ example: 1 })
     @IsNumber()
-    lectureTeacherId!: number;
-
-    @ApiProperty({ example: 2 })
-    @IsNumber()
-    practiceTeacherId!: number;
+    roomId!: number;
 
     @ApiProperty({ example: 1 })
     @IsNumber()
-    roomId!: number;
-
-    @ApiProperty({ example: '2025-10-21' })
-    @IsString()
-    @IsNotEmpty()
-    startDate!: string;
-
-    @ApiPropertyOptional({ example: '2026-04-21' })
-    @IsOptional()
-    @IsString()
-    endDate?: string;
-
-    @ApiProperty({ example: 'Dushanba, Chorshanba' })
-    @IsString()
-    @IsNotEmpty()
-    lectureDays!: string;
-
-    @ApiProperty({ example: '09:00' })
-    @IsString()
-    @IsNotEmpty()
-    lectureStartTime!: string;
-
-    @ApiProperty({ example: '11:00' })
-    @IsString()
-    @IsNotEmpty()
-    lectureEndTime!: string;
-
-    @ApiProperty({ example: 'Seshanba, Payshanba' })
-    @IsString()
-    @IsNotEmpty()
-    practiceDays!: string;
-
-    @ApiProperty({ example: '14:00' })
-    @IsString()
-    @IsNotEmpty()
-    practiceStartTime!: string;
-
-    @ApiProperty({ example: '16:00' })
-    @IsString()
-    @IsNotEmpty()
-    practiceEndTime!: string;
+    userId!: number;
 }

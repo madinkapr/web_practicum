@@ -3,7 +3,6 @@ import { GroupsService } from './groups.service';
 import { CreateGroupDto } from './dto/create-group.dto';
 import { UpdateGroupDto } from './dto/update-group.dto';
 
-
 @Controller('groups')
 export class GroupsController {
   constructor(private readonly groupsService: GroupsService) {}

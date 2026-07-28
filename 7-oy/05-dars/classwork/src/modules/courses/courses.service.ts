@@ -1,18 +1,39 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
-import { PrismaService } from '../../prisma/prisma.service';
+import { PrismaService } from '../../core/database/prisma.service';
+import { Status } from '@prisma/client';
 
 @Injectable()
 export class CoursesService {
   constructor(private prisma: PrismaService) {}
 
-  async create(createCourseDto: CreateCourseDto) {
-    return this.prisma.course.create({ data: createCourseDto });
+  async findAll() {
+    const courses = await this.prisma.course.findMany({
+      where: { status: Status.ACTIVE }
+    });
+
+    return {
+      success: true,
+      data: courses
+    };
   }
 
-  async findAll() {
-    return this.prisma.course.findMany();
+  async create(createCourseDto: CreateCourseDto) {
+    const exists = await this.prisma.course.findUnique({
+      where: { name: createCourseDto.name }
+    });
+
+    if (exists) {
+      throw new ConflictException('Course already exists with this name');
+    }
+
+    await this.prisma.course.create({ data: createCourseDto });
+
+    return {
+      success: true,
+      message: 'Course created successfully'
+    };
   }
 
   async findOne(id: number) {
@@ -28,6 +49,14 @@ export class CoursesService {
 
   async remove(id: number) {
     await this.findOne(id);
-    return this.prisma.course.delete({ where: { id } });
+    await this.prisma.course.update({
+      where: { id },
+      data: { status: Status.INACTIVE }
+    });
+
+    return {
+      success: true,
+      message: 'Course deleted successfully'
+    };
   }
 }

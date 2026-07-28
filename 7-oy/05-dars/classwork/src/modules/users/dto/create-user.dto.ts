@@ -1,32 +1,29 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsEnum } from "class-validator";
+import { IsString, IsNotEmpty, IsEmail, IsPhoneNumber, MaxLength, MinLength } from "class-validator";
 
 export class CreateUserDto {
-    @ApiProperty({ example: 'Madina' })
+    @ApiProperty({ example: 'Madina Primova' })
     @IsString()
     @IsNotEmpty()
-    firstName!: string;
+    fullname!: string;
 
-    @ApiProperty({ example: 'Primova' })
+    @ApiProperty({ example: 'madina.primova@gmail.com' })
+    @IsEmail()
+    email!: string;
+
+    @ApiProperty({ example: '+998990987643' })
+    @IsPhoneNumber("UZ")
+    contact!: string;
+
+    @ApiProperty({ example: 'Toshkent, Mirzo Ulugbek tumani, 8-uy' })
     @IsString()
     @IsNotEmpty()
-    lastName!: string;
-
-    @ApiProperty({ example: '+998931801444' })
-    @IsString()
-    @IsNotEmpty()
-    phone!: string;
-
-    @ApiProperty({ example: 'Female', enum: ['Male', 'Female'] })
-    @IsEnum(['Male', 'Female'])
-    gender!: string;
+    address!: string;
 
     @ApiProperty({ example: '123456' })
     @IsString()
     @IsNotEmpty()
+    @MinLength(6)
+    @MaxLength(20)
     password!: string;
-
-    @ApiProperty({ example: 'student', enum: ['admin', 'teacher', 'student'] })
-    @IsEnum(['admin', 'teacher', 'student'])
-    role!: string;
 }

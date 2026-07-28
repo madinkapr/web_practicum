@@ -9,72 +9,121 @@ datasource db {
 enum Roles {
   SUPERADMIN
   ADMIN
-  Teacher
+  TEACHER
+  STUDENT
+}
+
+enum WeekDays {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+enum Status{
+  ACTIVE
+  INACTIVE
+  FREEZE
+  COMPLETED
 }
 
 model User {
   id        Int    @id @default(autoincrement())
-  firstName String
-  lastName  String
-  phone     String
-  gender    String
+  fullname String
+  email  String @unique
+  contact     String @unique
   password  String
-  role      String
+  address String
+  photo String
+  role Roles @default(ADMIN)
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
 }
 
 model Teacher {
-  id         Int     @id @default(autoincrement())
-  firstName  String
-  lastName   String
-  phone      String
-  gender     String
-  password   String
-  courseId   Int
-  experience Int?
+  id        Int    @id @default(autoincrement())
+  fullname String
+  email  String @unique
+  contact     String @unique
+  password  String
+  address String
+  photo String
+  role      Roles @default(TEACHER)
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
 }
 
 model Student {
-  id        Int     @id @default(autoincrement())
-  firstName String
-  lastName  String
-  phone     String
-  gender    String
+  id        Int    @id @default(autoincrement())
+  fullname String
+  email  String @unique
+  contact     String @unique
   password  String
-  groupId   Int
-  birthDate String?
-}
+  address String
+  photo String
+  role      Roles @default(STUDENT)
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
 
-model Room {
-  id       Int     @id @default(autoincrement())
-  name     String
-  capacity Int
-  floor    Int?
-  type     String?
 }
 
 model Course {
   id            Int     @id @default(autoincrement())
-  name          String
-  duration      Int
+  name          String @unique
   price         Int
-  description   String?
-  lectureCount  Int
-  practiceCount Int
+  duration_month Int
+  duration_hours Int
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
+}
+
+model Room {
+  id            Int     @id @default(autoincrement())
+  name          String @unique
+  capacity Int
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
+
 }
 
 model Group {
   id                  Int     @id @default(autoincrement())
-  name                String
-  courseId            Int
-  lectureTeacherId    Int
-  practiceTeacherId   Int
-  roomId              Int
-  startDate           String
-  endDate             String?
-  lectureDays         String
-  lectureStartTime    String
-  lectureEndTime      String
-  practiceDays        String
-  practiceStartTime   String
-  practiceEndTime     String
+  name                String @unique
+  week_days           WeekDays[]
+  start_time String
+  courseId Int
+  roomId Int
+  userId Int
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
+}
+
+model StudentGroup {
+  id                  Int     @id @default(autoincrement())
+  groupId Int
+  studentId Int
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
+}
+
+model TeacherGroup {
+  id                  Int     @id @default(autoincrement())
+  groupId Int
+  teacherId Int
+  status Status @default(ACTIVE)
+  created_at DateTime @default(now())
+  update_at DateTime @updatedAt
 }
